@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tower Rush — Play</title>
+  <link rel="icon" href="images/favicon-1w.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="images/favicon-1w.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Block 1: Tower Rush (solid blue) -->
+  <section class="hero hero--tower" aria-label="Tower Rush" data-i18n-aria-label="hero_aria">
+    <div class="hero__topbar">
+      <button
+        type="button"
+        class="btn-subscribe-pill js-subscribe-open"
+        aria-haspopup="dialog"
+        aria-controls="subscribe-modal-dialog"
+      >
+        <svg class="btn-subscribe-pill__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+        </svg>
+        <span class="btn-subscribe-pill__label">Subscribe</span>
+      </button>
+      <button type="button" class="btn-share-round js-share-btn" data-i18n-aria-label="share_aria" aria-label="Share">
+        <svg class="btn-share-round__icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+        </svg>
+      </button>
+    </div>
+    <div class="hero__art-wrap">
+      <img
+        class="hero__art"
+        src="images/tower-rush-hero.png"
+        width="1024"
+        height="1024"
+        alt="Tower Rush"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </div>
+    <h1 class="hero__title hero__title--with-tower">
+      <span class="hero__title-text">Tower Rush</span>
+      <svg class="hero__title-tower" viewBox="0 0 32 40" width="32" height="40" aria-hidden="true" focusable="false">
+        <path fill="#d32f2f" d="M16 2l12 34H4L16 2z" />
+        <path fill="#fafafa" d="M16 8L10 30h12L16 8z" opacity="0.35" />
+        <path fill="none" stroke="#ffebee" stroke-width="0.8" d="M16 10v18M11 17h10M10 23h12M9 29h14" />
+      </svg>
+    </h1>
+    <p class="hero__subtitle" data-i18n="subtitle">Register and play</p>
+    <span id="share-copied-msg" class="visually-hidden" aria-hidden="true" data-i18n="share_copied">Link copied</span>
+
+    <div class="promo-card" role="region" aria-label="Promo information" data-i18n-aria-label="promo_region_aria">
+      <p class="promo-card__line" data-i18n="promo_vpn">If you are from the USA or the UK, enable vpn before going to the site</p>
+      <p class="promo-card__code" data-i18n-html="promo_code">🎁 <strong>PROMO CODE: luckypari</strong> 🎁</p>
+      <p class="promo-card__line" data-i18n="promo_bonus">Use this promo code when registering to get +500% bonus and 500FS on your first deposit</p>
+    </div>
+  </section>
+
+  <!-- Block 2: More games + How to play (gradient) -->
+  <section class="hero hero--games" aria-label="More games" data-i18n-aria-label="games_section_aria">
+    <header class="games-block__intro">
+      <h2 class="games-block__title" data-i18n="games_block_title">Games</h2>
+      <p class="games-block__desc" data-i18n="games_block_desc">Tap a game to start, then pick your country. Use the orange button below for registration steps.</p>
+    </header>
+    <div class="games-row">
+      <a class="btn btn--play btn--3d btn--play-row js-game-open" href="#" id="btn-tower-rush">
+        <span class="btn__thumb" aria-hidden="true">
+          <img class="btn__thumb-img" src="images/games/game-tower-rush.png" width="52" height="52" alt="" decoding="async" />
+        </span>
+        <span class="btn__label" data-i18n="play_tower">Play &quot;Tower Rush&quot;</span>
+        <span class="btn__emoji" aria-hidden="true">🏠</span>
+      </a>
+      <a class="btn btn--play btn--3d btn--play-row js-game-open" href="#">
+        <span class="btn__thumb" aria-hidden="true">
+          <img class="btn__thumb-img" src="images/games/game-rush-hour.png" width="52" height="52" alt="" decoding="async" />
+        </span>
+        <span class="btn__label" data-i18n="play_rush">PLAY &quot;RUSH HOUR&quot;</span>
+        <span class="btn__emoji" aria-hidden="true">🚙</span>
+      </a>
+      <a class="btn btn--play btn--3d btn--play-row js-game-open" href="#">
+        <span class="btn__thumb" aria-hidden="true">
+          <img class="btn__thumb-img" src="images/games/game-aviamasters.png" width="52" height="52" alt="" decoding="async" />
+        </span>
+        <span class="btn__label" data-i18n="play_aviamasters">PLAY &quot;AVIAMASTERS&quot;</span>
+        <span class="btn__emoji" aria-hidden="true">✈️</span>
+      </a>
+      <a class="btn btn--play btn--3d btn--play-row js-game-open" href="#">
+        <span class="btn__thumb" aria-hidden="true">
+          <img class="btn__thumb-img" src="images/games/game-play-me.png" width="52" height="52" alt="" decoding="async" />
+        </span>
+        <span class="btn__label" data-i18n="play_playme">PLAY &quot;PLAY ME&quot;</span>
+        <span class="btn__emoji" aria-hidden="true">🎹</span>
+      </a>
+    </div>
+
+    <div class="accordions" aria-label="Registration guides">
+      <button type="button" class="btn btn--how btn--3d accordion__trigger" aria-expanded="false" aria-controls="how-reg-en" id="how-reg-en-btn">
+        <span class="btn__label btn__label--how-en">HOW TO PLAY ⁉️</span>
+        <span class="btn__chevron" aria-hidden="true">▼</span>
+      </button>
+      <div class="accordion__panel" id="how-reg-en" role="region" aria-labelledby="how-reg-en-btn" hidden>
+        <div class="accordion__content accordion__content--register">
+          <p class="register-hint__lead" data-i18n="register_hint_lead">Screenshots in order: Registration → form → payment method → find the game in Casino search.</p>
+          <div class="register-hint__gallery">
+            <figure class="register-hint__shot">
+              <img class="register-hint__img" src="images/register/en-1.png" alt="Step 1: tap Registration" loading="lazy" width="900" height="1950" decoding="async" />
+              <figcaption class="register-hint__caption">1 · Registration</figcaption>
+            </figure>
+            <figure class="register-hint__shot">
+              <img class="register-hint__img" src="images/register/en-2.png" alt="Step 2: fill registration form" loading="lazy" width="900" height="1950" decoding="async" />
+              <figcaption class="register-hint__caption">2 · Form</figcaption>
+            </figure>
+            <figure class="register-hint__shot">
+              <img class="register-hint__img" src="images/register/en-3.png" alt="Step 3: choose payment method" loading="lazy" width="900" height="1950" decoding="async" />
+              <figcaption class="register-hint__caption">3 · Deposit</figcaption>
+            </figure>
+            <figure class="register-hint__shot">
+              <img class="register-hint__img" src="images/register/en-4.png" alt="Step 4: Casino → Search → Play Me" loading="lazy" width="900" height="1950" decoding="async" />
+              <figcaption class="register-hint__caption">4 · Find game</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="subscribe-modal" class="subscribe-modal" hidden aria-hidden="true">
+    <div class="subscribe-modal__backdrop" aria-hidden="true"></div>
+    <div
+      id="subscribe-modal-dialog"
+      class="subscribe-modal__sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="subscribe-modal-heading"
+    >
+      <button type="button" class="subscribe-modal__close" data-subscribe-close aria-label="Close">×</button>
+      <div class="subscribe-modal__brand">
+        <div class="subscribe-modal__logo-ring" aria-hidden="true">
+          <svg class="subscribe-modal__logo-svg" viewBox="0 0 64 64" width="56" height="56">
+            <circle cx="32" cy="32" r="30" fill="#fff" stroke="#222" stroke-width="2" />
+            <rect x="22" y="28" width="20" height="18" fill="#e8c84a" stroke="#222" stroke-width="1" />
+            <polygon points="32,14 48,30 16,30" fill="#c94a4a" stroke="#222" stroke-width="1" />
+            <rect x="26" y="34" width="5" height="8" fill="#4a7ac9" />
+            <rect x="33" y="34" width="5" height="8" fill="#4a7ac9" />
+          </svg>
+        </div>
+        <p id="subscribe-modal-heading" class="subscribe-modal__logotype">Tower Rush</p>
+      </div>
+      <div class="subscribe-modal__box">
+        <p class="subscribe-modal__lead">Sign up to get exclusive email updates directly from me.</p>
+        <form id="subscribe-form" class="subscribe-form" novalidate>
+          <label class="subscribe-form__field">
+            <span class="visually-hidden">First name</span>
+            <input
+              class="subscribe-form__input"
+              type="text"
+              name="name"
+              id="subscribe-name"
+              placeholder="First Name"
+              required
+              autocomplete="given-name"
+            />
+          </label>
+          <label class="subscribe-form__field">
+            <span class="visually-hidden">Email</span>
+            <input
+              class="subscribe-form__input"
+              type="email"
+              name="email"
+              id="subscribe-email"
+              placeholder="Email"
+              required
+              autocomplete="email"
+            />
+          </label>
+          <p class="subscribe-form__error" id="subscribe-form-error" role="alert" hidden></p>
+          <button type="submit" class="subscribe-form__submit" id="subscribe-submit">Subscribe</button>
+        </form>
+        <p class="subscribe-form__thanks" id="subscribe-form-thanks" hidden>Thank you! You are subscribed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="country-modal" class="country-modal" hidden aria-hidden="true">
+    <div class="country-modal__backdrop" aria-hidden="true"></div>
+    <div class="country-modal__sheet" role="dialog" aria-modal="true" aria-labelledby="country-modal-title">
+      <div class="country-modal__head">
+        <h2 id="country-modal-title" class="country-modal__title" data-i18n="modal_title">Country</h2>
+        <button type="button" class="country-modal__close" data-modal-close data-i18n-aria-label="close_aria" aria-label="Close">×</button>
+      </div>
+      <ul class="country-list" id="country-list"></ul>
+    </div>
+  </div>
+
+  <div id="share-toast" class="share-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="i18n.js"></script>
+  <script src="subscribe-modal.js"></script>
+  <script src="countries-modal.js"></script>
+  <script>
+    (function () {
+      var ph =
+        "data:image/svg+xml," +
+        encodeURIComponent(
+          '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="220" viewBox="0 0 400 220">' +
+            '<rect fill="#e8eaef" width="400" height="220"/>' +
+            '<text x="200" y="110" text-anchor="middle" dominant-baseline="middle" fill="#9ca3af" font-family="system-ui,sans-serif" font-size="15" font-weight="600">Screenshot</text>' +
+            "</svg>"
+        );
+      document.querySelectorAll(".register-hint__img").forEach(function (img) {
+        img.addEventListener("error", function () {
+          if (img.getAttribute("data-ph") === "1") return;
+          img.setAttribute("data-ph", "1");
+          img.src = ph;
+          img.alt = "";
+        });
+      });
+    })();
+    document.querySelectorAll('.accordion__trigger').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.accordion__trigger').forEach(function (other) {
+          if (other === btn) return;
+          other.setAttribute('aria-expanded', 'false');
+          other.classList.remove('accordion__trigger--open');
+          var p = document.getElementById(other.getAttribute('aria-controls'));
+          if (p) { p.hidden = true; }
+        });
+        btn.setAttribute('aria-expanded', String(!open));
+        btn.classList.toggle('accordion__trigger--open', !open);
+        if (panel) panel.hidden = open;
+      });
+    });
+    (function () {
+      var btn = document.querySelector(".js-share-btn");
+      var toast = document.getElementById("share-toast");
+      var msgEl = document.getElementById("share-copied-msg");
+      if (!btn || !toast) return;
+      function showToast(text) {
+        toast.textContent = text;
+        toast.hidden = false;
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(function () {
+          toast.hidden = true;
+          toast.textContent = "";
+        }, 2200);
+      }
+      function toastMsg() {
+        return (msgEl && msgEl.textContent.trim()) || "Link copied";
+      }
+      function fallbackCopy(url) {
+        function execCopy() {
+          try {
+            var ta = document.createElement("textarea");
+            ta.value = url;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.left = "-9999px";
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            showToast(toastMsg());
+          } catch (e) {
+            window.prompt("Copy link:", url);
+          }
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(url).then(function () {
+            showToast(toastMsg());
+          }).catch(function () {
+            execCopy();
+          });
+        }
+        execCopy();
+        return Promise.resolve();
+      }
+      btn.addEventListener("click", function () {
+        var url = window.location.href;
+        var title = document.title || "Tower Rush";
+        if (navigator.share) {
+          navigator
+            .share({ title: title, text: title, url: url })
+            .catch(function (err) {
+              if (err && err.name === "AbortError") return;
+              fallbackCopy(url);
+            });
+        } else {
+          fallbackCopy(url);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
