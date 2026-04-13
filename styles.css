@@ -257,6 +257,32 @@ body {
   line-height: 1.25;
 }
 
+.btn--lucky {
+  margin-top: 0.2rem;
+  background: #0f172a;
+  color: #e2f7ff;
+  box-shadow: 0 6px 0 #1e293b;
+  border-color: #0b1220;
+}
+
+.btn--lucky .btn__label {
+  letter-spacing: 0.02em;
+  font-size: 0.88rem;
+}
+
+.btn--lucky .btn__emoji {
+  font-size: 1.2rem;
+}
+
+.btn--lucky:active {
+  box-shadow: 0 3px 0 #1e293b;
+}
+
+.btn__thumb--lucky {
+  border-color: #7dd3fc;
+  background: #020617;
+}
+
 .accordions {
   width: min(100%, 400px);
   margin-top: 0.25rem;
