@@ -43,8 +43,8 @@ body {
 }
 
 .hero__art-wrap {
-  width: min(68vw, 260px);
-  max-width: 260px;
+  width: min(78vw, 320px);
+  max-width: 320px;
   aspect-ratio: 1;
   margin: 0 auto 1rem;
   border-radius: 50%;
@@ -134,6 +134,16 @@ body {
   font-size: clamp(1.65rem, 5.5vw, 2.35rem);
   letter-spacing: 0.04em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.hero__title--games-list {
+  max-width: min(92vw, 700px);
+  font-size: clamp(1.25rem, 5.2vw, 2rem);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  text-transform: none;
+  text-wrap: balance;
 }
 
 .hero__title-text {
